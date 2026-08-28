@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>I.S.P.S. | Innovation Service Plomberie Sanitaire</title>
+
+  <meta name="description"
+        content="Innovation Service Plomberie Sanitaire - Services professionnels de plomberie sanitaire en Haïti.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f8fb;
+      color: #17212b;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #ffffff;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #0877bd;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 11px;
+      color: #555;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #17212b;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #0877bd;
+    }
+
+    .hero {
+      min-height: 90vh;
+      padding: 80px 7%;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #eaf7ff, #ffffff);
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #d8f0ff;
+      color: #0877bd;
+      padding: 8px 15px;
+      border-radius: 30px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 6vw, 68px);
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #0877bd;
+    }
+
+    .hero p {
+      font-size: 19px;
+      color: #555;
+      max-width: 650px;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 23px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      border: 2px solid #0877bd;
+    }
+
+    .btn-primary {
+      background: #0877bd;
+      color: white;
+    }
+
+    .btn-secondary {
+      color: #0877bd;
+      background: white;
+    }
+
+    section {
+      padding: 75px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #666;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .service {
+      background: white;
+      padding: 28px;
+      border-radius: 14px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+      transition: 0.3s;
+    }
+
+    .service:hover {
+      transform: translateY(-5px);
+    }
+
+    .service .icon {
+      font-size: 38px;
+      margin-bottom: 12px;
+    }
+
+    .service h3 {
+      margin-bottom: 8px;
+      color: #0877bd;
+    }
+
+    .about {
+      background: white;
+    }
+
+    .about-box {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about-box h2 {
+      font-size: 38px;
+      margin-bottom: 20px;
+    }
+
+    .about-box p {
+      color: #555;
+      font-size: 18px;
+    }
+
+    .numbers {
+      margin-top: 35px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .number {
+      background: #f1f8fc;
+      padding: 18px 25px;
+      border-radius: 10px;
+      font-weight: bold;
+      color: #0877bd;
+    }
+
+    .contact {
+      background: #0877bd;
+      color: white;
+    }
+
+    .contact .section-title p {
+      color: #e5f5ff;
+    }
+
+    .contact-box {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .phone {
+      display: block;
+      color: white;
+      text-decoration: none;
+      font-size: 25px;
+      font-weight: bold;
+      margin: 10px;
+    }
+
+    .whatsapp {
+      display: inline-block;
+      margin-top: 25px;
+      background: white;
+      color: #0877bd;
+      padding: 15px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #101820;
+      color: white;
+      text-align: center;
+      padding: 25px 7%;
+    }
+
+    footer span {
+      color: #5dbfff;
+    }
+
+    @media (max-width: 700px) {
+
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav a {
+        margin: 0 6px;
+        font-size: 13px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 70px 7%;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      section {
+        padding: 55px 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">
+    I.S.P.S.
+    <span>Innovation Service Plomberie Sanitaire</span>
+  </div>
+
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#services">Services</a>
+    <a href="#apropos">À propos</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+</header>
+
+
+<!-- ACCUEIL -->
+
+<section class="hero" id="accueil">
+
+  <div class="hero-content">
+
+    <div class="badge">
+      🔧 Technicien en plomberie sanitaire
+    </div>
+
+    <h1>
+      Votre solution<br>
+      <span>Plomberie & Sanitaire</span>
+    </h1>
+
+    <p>
+      <strong>Innovation Service Plomberie Sanitaire (I.S.P.S.)</strong>
+      vous accompagne pour vos travaux d'installation,
+      réparation et maintenance en plomberie sanitaire.
+    </p>
+
+    <div class="buttons">
+
+      <a href="#contact" class="btn btn-primary">
+        Demander un service
+      </a>
+
+      <a href="#services" class="btn btn-secondary">
+        Voir nos services
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section id="services">
+
+  <div class="section-title">
+
+    <h2>Nos Services</h2>
+
+    <p>
+      Des solutions professionnelles pour vos installations sanitaires.
+    </p>
+
+  </div>
+
+
+  <div class="services">
+
+    <div class="service">
+      <div class="icon">🚰</div>
+      <h3>Installation sanitaire</h3>
+      <p>
+        Installation de lavabo, évier, douche, robinetterie et équipements sanitaires.
+      </p>
+    </div>
+
+
+    <div class="service">
+      <div class="icon">🚽</div>
+      <h3>Installation WC</h3>
+      <p>
+        Installation et réparation de toilettes et systèmes d'évacuation.
+      </p>
+    </div>
+
+
+    <div class="service">
+      <div class="icon">💧</div>
+      <h3>Fuites d'eau</h3>
+      <p>
+        Recherche, réparation et entretien des problèmes de fuite d'eau.
+      </p>
+    </div>
+
+
+    <div class="service">
+      <div class="icon">🔧</div>
+      <h3>Tuyauterie</h3>
+      <p>
+        Installation, modification et réparation des réseaux de tuyauterie.
+      </p>
+    </div>
+
+
+    <div class="service">
+      <div class="icon">🔥</div>
+      <h3>Chauffe-eau</h3>
+      <p>
+        Installation et maintenance de systèmes de chauffe-eau.
+      </p>
+    </div>
+
+
+    <div class="service">
+      <div class="icon">⚙️</div>
+      <h3>Pompe à eau</h3>
+      <p>
+        Installation et entretien des systèmes de pompage d'eau.
+      </p>
+    </div>
+
+
+    <div class="service">
+      <div class="icon">🛠️</div>
+      <h3>Maintenance</h3>
+      <p>
+        Entretien préventif et dépannage des installations sanitaires.
+      </p>
+    </div>
+
+
+    <div class="service">
+      <div class="icon">🏗️</div>
+      <h3>Travaux de chantier</h3>
+      <p>
+        Réalisation de réseaux de plomberie pour maisons et bâtiments.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- À PROPOS -->
+
+<section class="about" id="apropos">
+
+  <div class="about-box">
+
+    <h2>À propos de I.S.P.S.</h2>
+
+    <p>
+      <strong>Innovation Service Plomberie Sanitaire</strong>
+      est un service spécialisé dans la plomberie sanitaire.
+      Notre objectif est de fournir un travail sérieux,
+      propre et professionnel, adapté aux besoins de chaque client.
+    </p>
+
+    <div class="numbers">
+
+      <div class="number">
+        📞 4287-8786
+      </div>
+
+      <div class="number">
+        📞 4855-0515
+      </div>
+
+      <div class="number">
+        📞 4266-1185
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+  <div class="section-title">
+
+    <h2>Contactez I.S.P.S.</h2>
+
+    <p>
+      Besoin d'un technicien en plomberie sanitaire ?
+      Appelez-nous directement.
+    </p>
+
+  </div>
+
+
+  <div class="contact-box">
+
+    <a class="phone" href="tel:42878786">
+      📞 4287-8786
+    </a>
+
+    <a class="phone" href="tel:48550515">
+      📞 4855-0515
+    </a>
+
+    <a class="phone" href="tel:42661185">
+      📞 4266-1185
+    </a>
+
+    <!-- WhatsApp -->
+    <a
+      class="whatsapp"
+      href="https://wa.me/50942878786"
+      target="_blank">
+      💬 Contacter sur WhatsApp
+    </a>
+
+  </div>
+
+</section>
+
+
+<footer>
+
+  <p>
+    © 2026 <span>I.S.P.S.</span> —
+    Innovation Service Plomberie Sanitaire.
+    Tous droits réservés.
+  </p>
+
+</footer>
+
+
+</body>
+  </html>
